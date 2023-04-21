@@ -1,7 +1,27 @@
 doctype html
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title My Awesome App
+    link(rel="stylesheet", href="/stylesheets/style.css")
+    // Map
+    link(rel='stylesheet' href='https://unpkg.com/leaflet@1.9.3/dist/leaflet.css' integrity='sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=' crossorigin='')
+    script(src='https://unpkg.com/leaflet@1.9.3/dist/leaflet.js' integrity='sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=' crossorigin='')
   body
-    block content
+    header
+      h1 Bicicletas
+      nav
+        ul
+          li
+            a(href="/") Home
+          li
+            a(href="/about") About
+          li
+            a(href="/contact") Contact
+    main
+      block content
+    footer
+    .container
+      #map
+    script(src='/javascripts/map.js')
